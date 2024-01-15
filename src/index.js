@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Search from './pages/Search';
 import NotFound from './pages/NotFound';
 import MyBooks from './pages/MyBooks';
+import Feed from './pages/Feed';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: 'mybooks',
         element: <MyBooks />,
+      },
+      {
+        path: 'feed',
+        element: <Feed />,
       },
     ],
   },
