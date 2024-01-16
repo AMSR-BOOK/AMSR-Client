@@ -19,9 +19,9 @@ export default function Header({ page }) {
   };
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <h1 className={styles.title}>{handleTranslate(page)}</h1>
       <IoSettingsSharp className={styles.setting} />
-    </div>
+    </header>
   );
 }
