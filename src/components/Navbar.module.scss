@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  font-size: 1.75rem;
+}
+
+.link {
+  color: var(--color-text);
+  text-decoration: none;
+  height: 1.75rem;
+
+  &:hover,
+  &:focus {
+    color: var(--color-text);
+  }
+}
+
+.active {
+  color: var(--color-accent);
+  height: 1.75rem;
+}
