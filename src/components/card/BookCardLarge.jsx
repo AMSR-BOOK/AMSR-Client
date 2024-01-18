@@ -4,7 +4,6 @@ import LikeButton from '../button/LikeButton';
 
 export default function BookCardLarge({ book }) {
   const {
-    isbn,
     frontCover,
     title,
     authors,
@@ -16,7 +15,7 @@ export default function BookCardLarge({ book }) {
   } = book;
 
   return (
-    <li key={isbn}>
+    <li>
       <img src={frontCover} alt="" />
       <h4>{title}</h4>
       <p>

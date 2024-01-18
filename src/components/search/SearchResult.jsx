@@ -21,7 +21,7 @@ export default function SearchResult({ param }) {
       {results && (
         <ul>
           {results.data.map((book) => (
-            <BookCardLarge book={book} />
+            <BookCardLarge key={book.isbn} book={book} />
           ))}
         </ul>
       )}
