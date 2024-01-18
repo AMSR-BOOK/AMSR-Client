@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+import BookCardLarge from '../card/BookCardLarge';
 
 export default function SearchResult({ param }) {
   const [keyword, setKeyword] = useState(param.get('key'));
@@ -20,7 +21,7 @@ export default function SearchResult({ param }) {
       {results && (
         <ul>
           {results.data.map((book) => (
-            <li key={book.isbn}>{book.title}</li>
+            <BookCardLarge book={book} />
           ))}
         </ul>
       )}
