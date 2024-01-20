@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import SearchResult from '../components/search/SearchResult';
 import { useSearchParams } from 'react-router-dom';
+import styles from './Search.module.scss';
+import { IoSearchOutline } from 'react-icons/io5';
+import { BiSolidBookAdd } from 'react-icons/bi';
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -15,8 +18,8 @@ export default function Search() {
   useEffect(() => setSearchKey(key), [key]);
 
   return (
-    <section>
-      <header>
+    <section className={styles.container}>
+      <header className={styles.searchBox}>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -24,9 +27,13 @@ export default function Search() {
             value={searchKey}
             onChange={(e) => setSearchKey(e.target.value)}
           />
-          <button>검색</button>
+          <button>
+            <IoSearchOutline />
+          </button>
         </form>
-        <button>직접 추가</button>
+        <button className={styles.addBtn}>
+          <BiSolidBookAdd />
+        </button>
       </header>
       {searchParams.get('key') && <SearchResult param={searchParams} />}
     </section>
