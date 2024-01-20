@@ -1,7 +1,11 @@
 :root {
   --color-bg: white;
+  --color-blank: #dddddd;
   --color-text: #110700;
   --color-accent: #cc8d45;
+  --color-like: #f55757;
+  --color-border: #dddddd;
+  --color-stroke: #aaaaaa;
 }
 
 body {
@@ -11,6 +15,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: var(--color-bg);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 code {
