@@ -1,6 +1,7 @@
 import React from 'react';
 import StatusButton from '../button/StatusButton';
 import LikeButton from '../button/LikeButton';
+import styles from './BookCardLarge.module.scss';
 
 export default function BookCardLarge({ book }) {
   const {
@@ -13,19 +14,24 @@ export default function BookCardLarge({ book }) {
     pages,
     status,
   } = book;
+  const handleClick = () => {
+    // TO DO : 책 정보 페이지로 이동
+  };
 
   return (
-    <li>
+    <li onClick={handleClick} className={styles.book}>
       <img src={frontCover} alt="" />
-      <h4>{title}</h4>
-      <p>
-        {`${authors[0]}
+      <div className={styles.info}>
+        <h4>{title}</h4>
+        <p>
+          {`${authors[0]}
         ${authors.length > 1 || translators.length > 0 ? ' 외' : ''} | 
         ${publisher} | ${publishedDate}`}
-      </p>
-      <p>{pages}쪽</p>
-      <LikeButton />
-      <StatusButton />
+        </p>
+        <p className={styles.page}>{pages}쪽</p>
+      </div>
+      <LikeButton id={book.isbn} />
+      <StatusButton status={status} />
     </li>
   );
 }
