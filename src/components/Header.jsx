@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { IoSettingsSharp } from 'react-icons/io5';
+import { IoSettingsSharp, IoChevronBackOutline } from 'react-icons/io5';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header({ page }) {
+  const navigate = useNavigate();
   const handleTranslate = (pageTitle) => {
     switch (pageTitle) {
       case 'search':
@@ -20,6 +22,10 @@ export default function Header({ page }) {
 
   return (
     <header className={styles.container}>
+      <IoChevronBackOutline
+        className={styles.back}
+        onClick={() => navigate(-1)}
+      />
       <h1 className={styles.title}>{handleTranslate(page)}</h1>
       <IoSettingsSharp className={styles.setting} />
     </header>
