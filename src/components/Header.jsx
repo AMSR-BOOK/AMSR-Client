@@ -14,7 +14,7 @@ export default function Header({ page }) {
       case 'setting':
         return '설정';
       default:
-        return '검색';
+        return '아무소록';
     }
   };
 
