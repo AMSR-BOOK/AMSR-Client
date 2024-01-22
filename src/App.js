@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom';
-import { useState } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import styles from './App.module.scss';
 import Navbar from './components/Navbar';
@@ -8,8 +8,13 @@ import Header from './components/Header';
 const queryClient = new QueryClient();
 
 function App() {
+  const location = useLocation();
   const [page, setPage] = useState('');
-  const handleUpdate = (updatedPage) => setPage(updatedPage);
+
+  useEffect(() => {
+    const path = location.pathname.split('/');
+    setPage(path[1]);
+  }, [location]);
 
   return (
     <div className={styles.container}>
@@ -17,7 +22,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Outlet />
       </QueryClientProvider>
-      <Navbar page={page} onUpdate={handleUpdate} />
+      <Navbar page={page} />
     </div>
   );
 }
