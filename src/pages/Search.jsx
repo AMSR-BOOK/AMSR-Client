@@ -12,7 +12,6 @@ export default function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearchParams({ key: searchKey });
-    console.log(searchParams.get('key'));
   };
 
   useEffect(() => setSearchKey(key), [key]);
@@ -24,7 +23,7 @@ export default function Search() {
           <input
             type="text"
             placeholder="검색어를 입력하세요."
-            value={searchKey}
+            value={searchKey || ''}
             onChange={(e) => setSearchKey(e.target.value)}
           />
           <button>
