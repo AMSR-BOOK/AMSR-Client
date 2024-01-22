@@ -1,0 +1,15 @@
+.btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+
+  .blank {
+    color: var(--color-stroke);
+  }
+
+  .fill {
+    color: var(--color-like);
+  }
+}

@@ -1,7 +1,12 @@
 :root {
   --color-bg: white;
+  --color-blank: #dddddd;
   --color-text: #110700;
   --color-accent: #cc8d45;
+  --color-like: #f55757;
+  --color-border: #dddddd;
+  --color-stroke: #aaaaaa;
+  --color-scrollbar: #aaa7a7;
 }
 
 body {
@@ -13,7 +18,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+  background-color: var(--color-bg);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
 }
