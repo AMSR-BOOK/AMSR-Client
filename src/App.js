@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import styles from './App.module.scss';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import { BookApiProvider } from './context/BookApiContext';
 
 const queryClient = new QueryClient();
 
@@ -19,9 +20,11 @@ function App() {
   return (
     <div className={styles.container}>
       <Header page={page} />
-      <QueryClientProvider client={queryClient}>
-        <Outlet />
-      </QueryClientProvider>
+      <BookApiProvider>
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+        </QueryClientProvider>
+      </BookApiProvider>
       <Navbar page={page} />
     </div>
   );

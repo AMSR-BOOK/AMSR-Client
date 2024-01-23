@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import BookCardLarge from '../card/BookCardLarge';
 import styles from './SearchResult.module.scss';
+import { useBookApi } from '../../context/BookApiContext';
 
 export default function SearchResult({ param }) {
   const [keyword, setKeyword] = useState(param.get('key'));
+  const { book } = useBookApi();
   const {
     isLoading,
     error,
     data: results,
   } = useQuery({
     queryKey: ['search', keyword],
-    queryFn: () => axios.get('/data/searchResult.json'),
+    queryFn: () => book.search(keyword),
   });
 
   return (
@@ -21,7 +22,7 @@ export default function SearchResult({ param }) {
       {error && <p>Error!!!</p>}
       {results && (
         <ul className={styles.list}>
-          {results.data.map((book) => (
+          {results.map((book) => (
             <BookCardLarge key={book.isbn} book={book} />
           ))}
         </ul>
