@@ -1,12 +1,12 @@
 import React from 'react';
+import BookCardDone from '../card/BookCardDone';
+import styles from './BookList.module.scss';
 
 export default function BookList({ bookList }) {
   return (
-    <ul>
+    <ul className={styles.container}>
       {bookList.map((book) => (
-        <li key={book.isbn}>
-          {book.title} {book.star}
-        </li>
+        <BookCardDone book={book} />
       ))}
     </ul>
   );

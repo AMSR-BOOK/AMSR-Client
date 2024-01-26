@@ -5,6 +5,7 @@ import BookList from '../components/mybooks/BookList';
 import LikeBookList from '../components/mybooks/LikeBookList';
 import { useBookApi } from '../context/BookApiContext';
 import { useQuery } from '@tanstack/react-query';
+import styles from './MyBooks.module.scss';
 
 export default function MyBooks() {
   const [viewList, setViewList] = useState(false);
@@ -20,24 +21,32 @@ export default function MyBooks() {
 
   const doneList = results && results.filter((book) => book.status === 'DONE');
 
+  const maxWidth = window.innerWidth - 48;
+  const [width, setWidth] = useState(0);
+
   return (
-    <div>
+    <div className={styles.container}>
       {isLoading && <p>loading...</p>}
       {error && <p>error</p>}
       {results && (
         <>
           <BookStateList bookList={results} />
-          <button onClick={() => setViewList(!viewList)}>
-            {viewList ? '책장' : '리스트'}
-          </button>
-          {viewList ? (
-            <BookList bookList={doneList} />
-          ) : (
-            <Bookshelf bookList={doneList} />
-          )}
+          <div className={styles.shelf}>
+            <div className={styles.wrapper}>
+              <h3>완독한 책</h3>
+              <button onClick={() => setViewList(!viewList)}>
+                {viewList ? '책장' : '리스트'}
+              </button>
+            </div>
+
+            {viewList ? (
+              <BookList bookList={doneList} />
+            ) : (
+              <Bookshelf bookList={doneList} />
+            )}
+          </div>
         </>
       )}
-      <LikeBookList />
     </div>
   );
 }
