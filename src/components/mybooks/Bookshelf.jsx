@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookSide from './BookSide';
+import styles from './Bookshelf.module.scss';
 
 export default function Bookshelf({ bookList }) {
   return (
-    <div>
-      <ul>
-        {bookList.map((book) => (
-          <li key={book.isbn}>
-            {book.title} {book.sizeHeight}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.list}>
+      {bookList.map((book) => (
+        <BookSide book={book} />
+      ))}
     </div>
   );
 }
