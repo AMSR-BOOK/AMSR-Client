@@ -1,0 +1,86 @@
+[
+  {
+    "isbn": "9791192300818",
+    "frontCover": "https://image.aladin.co.kr/product/32361/59/cover500/k592935565_2.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/32361/59/spineflip/K592935565_d.jpg",
+    "title": "마흔에 읽는 쇼펜하우어",
+    "authors": ["강용수"],
+    "translators": [],
+    "publisher": "유노북스",
+    "publishedDate": 2023,
+    "pages": 232,
+    "status": "NONE"
+  },
+  {
+    "isbn": "9791160024166",
+    "frontCover": "https://image.aladin.co.kr/product/32893/49/cover500/k382936525_2.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/32893/49/cover500/k382936525_2.jpg",
+    "title": "쇼펜하우어의 인생 수업",
+    "authors": ["아르투어 쇼펜하우어"],
+    "translators": ["강현규", "이상희"],
+    "publisher": "메이트북스",
+    "publishedDate": 2023,
+    "pages": 356,
+    "status": "NONE"
+  },
+  {
+    "isbn": "9791169850445",
+    "frontCover": "https://image.aladin.co.kr/product/32648/45/cover500/k072935654_1.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/32648/45/spineflip/K072935654_d.jpg",
+    "title": "남에게 보여주려고 인생을 낭비하지 마라",
+    "authors": ["아르투어 쇼펜하우어"],
+    "translators": ["박제헌"],
+    "publisher": "페이지2(page2)",
+    "publishedDate": 2023,
+    "pages": 352,
+    "status": "NONE"
+  },
+  {
+    "isbn": "9791164458783",
+    "frontCover": "https://image.aladin.co.kr/product/32972/95/cover500/k752936454_1.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/32972/95/spineflip/K752936454_d.jpg",
+    "title": "쇼펜하우어의 세상을 보는 지혜",
+    "authors": ["아르투어 쇼펜하우어"],
+    "translators": ["노희직"],
+    "publisher": "더스토리",
+    "publishedDate": 2023,
+    "pages": 320,
+    "status": "NONE"
+  },
+  {
+    "isbn": "9791192625553",
+    "frontCover": "https://image.aladin.co.kr/product/33210/9/cover500/k522937059_1.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/33210/9/cover500/k522937059_1.jpg",
+    "title": "당신의 인생이 왜 힘들지 않아야 한다고 생각하십니까",
+    "authors": ["아르투어 쇼펜하우어"],
+    "translators": ["김욱"],
+    "publisher": "포레스트북스",
+    "publishedDate": 2023,
+    "pages": 264,
+    "status": "NONE"
+  },
+  {
+    "isbn": "9788930302296",
+    "frontCover": "https://image.aladin.co.kr/product/8/35/cover500/8930302297_3.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/8/35/spineflip/8930302297_d.jpg",
+    "title": "쇼펜하우어 인생론",
+    "authors": ["아르투어 쇼펜하우어"],
+    "translators": ["최민홍"],
+    "publisher": "집문당",
+    "publishedDate": 2023,
+    "pages": 356,
+    "status": "NONE"
+  },
+  {
+    "isbn": "9791189922450",
+    "frontCover": "https://image.aladin.co.kr/product/33029/51/cover500/k482937176_1.jpg",
+    "sideCover": "https://image.aladin.co.kr/product/33029/51/spineflip/K482937176_d.jpg",
+    "title": "잠들기 전에 읽는 쇼펜하우어",
+    "authors": ["예저우"],
+    "translators": ["이영주"],
+    "publisher": "오렌지연필",
+    "publishedDate": 2023,
+    "pages": 360,
+    "status": "NONE"
+  }
+]
