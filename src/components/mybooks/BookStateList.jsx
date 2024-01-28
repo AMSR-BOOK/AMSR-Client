@@ -12,25 +12,25 @@ export default function BookStateList({ bookList }) {
     <div className={styles.container}>
       <div className={styles.btnGroup}>
         <button
-          className={filter === 'READING' && styles.active}
+          className={`${styles.btn} ${filter === 'READING' && styles.active}`}
           onClick={() => handleClick('READING')}
         >
           읽고 있는
         </button>
         <button
-          className={filter === 'PAUSED' && styles.active}
+          className={`${styles.btn} ${filter === 'PAUSED' && styles.active}`}
           onClick={() => handleClick('PAUSED')}
         >
           잠시 멈춘
         </button>
         <button
-          className={filter === 'WISH' && styles.active}
+          className={`${styles.btn} ${filter === 'WISH' && styles.active}`}
           onClick={() => handleClick('WISH')}
         >
           읽고 싶은
         </button>
         <button
-          className={filter === 'STOPPED' && styles.active}
+          className={`${styles.btn} ${filter === 'STOPPED' && styles.active}`}
           onClick={() => handleClick('STOPPED')}
         >
           그만 읽을
@@ -38,7 +38,10 @@ export default function BookStateList({ bookList }) {
       </div>
       <ul className={styles.list}>
         {bookList.map(
-          (book) => book.status === filter && <BookCardMedium book={book} />
+          (book) =>
+            book.status === filter && (
+              <BookCardMedium book={book} key={book.isbn} />
+            )
         )}
       </ul>
     </div>

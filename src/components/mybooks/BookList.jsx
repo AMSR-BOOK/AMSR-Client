@@ -6,7 +6,7 @@ export default function BookList({ bookList }) {
   return (
     <ul className={styles.container}>
       {bookList.map((book) => (
-        <BookCardDone book={book} />
+        <BookCardDone book={book} key={book.isbn} />
       ))}
     </ul>
   );
