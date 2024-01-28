@@ -34,9 +34,24 @@ export default function MyBooks() {
           <div className={styles.shelf}>
             <div className={styles.wrapper}>
               <h3>완독한 책</h3>
-              <button onClick={() => setViewList(!viewList)}>
-                {viewList ? '책장' : '리스트'}
-              </button>
+              <div className={styles.btnGroup}>
+                <button
+                  className={`${styles.btn} ${
+                    viewList ? styles.normal : styles.selected
+                  }`}
+                  onClick={() => setViewList(false)}
+                >
+                  책장
+                </button>
+                <button
+                  className={`${styles.btn} ${
+                    viewList ? styles.selected : styles.normal
+                  }`}
+                  onClick={() => setViewList(true)}
+                >
+                  리스트
+                </button>
+              </div>
             </div>
 
             {viewList ? (
