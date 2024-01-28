@@ -4,10 +4,10 @@ import styles from './Bookshelf.module.scss';
 
 export default function Bookshelf({ bookList }) {
   return (
-    <div className={styles.list}>
+    <ul className={styles.list}>
       {bookList.map((book) => (
-        <BookSide book={book} />
+        <BookSide book={book} key={book.isbn} />
       ))}
-    </div>
+    </ul>
   );
 }

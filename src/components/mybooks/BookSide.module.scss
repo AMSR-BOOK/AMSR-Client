@@ -1,6 +1,15 @@
+.wrapper {
+  list-style: none;
+
+  .img {
+    display: block;
+  }
+}
+
 .side {
   margin: 0;
   padding: 0.5rem 0;
+  display: block;
 
   .title {
     font-family: 'Roboto';
