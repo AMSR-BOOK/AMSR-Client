@@ -5,7 +5,7 @@ export default function BookCardMedium({ book }) {
   const { isbn, frontCover, title, status, readingPercent } = book;
 
   return (
-    <li key={isbn} className={styles.book}>
+    <li className={styles.book}>
       <div className={styles.wrapper}>
         <img className={styles.img} src={frontCover} alt={title} />
         {(status === 'READING' || status === 'PAUSED') && (
