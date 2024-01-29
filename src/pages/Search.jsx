@@ -11,7 +11,9 @@ export default function Search() {
   const key = searchParams.get('key');
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchParams({ key: searchKey });
+    if (searchKey !== (null || '')) {
+      setSearchParams({ key: searchKey });
+    }
   };
 
   useEffect(() => setSearchKey(key), [key]);
