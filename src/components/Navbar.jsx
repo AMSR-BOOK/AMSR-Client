@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 import { IoSearchOutline } from 'react-icons/io5';
-import { CgDisplayFullwidth } from 'react-icons/cg';
+import { HiHome } from 'react-icons/hi';
 import { ImBooks } from 'react-icons/im';
+// feed icon : import { CgDisplayFullwidth } from 'react-icons/cg';
 
 export default function Navbar({ page }) {
   return (
@@ -14,11 +15,8 @@ export default function Navbar({ page }) {
       >
         <IoSearchOutline />
       </Link>
-      <Link
-        to="/feed"
-        className={page === 'feed' ? styles.active : styles.link}
-      >
-        <CgDisplayFullwidth />
+      <Link to="/" className={page === 'home' ? styles.active : styles.link}>
+        <HiHome />
       </Link>
       <Link
         to="/mybooks"

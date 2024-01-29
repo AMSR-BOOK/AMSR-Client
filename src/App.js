@@ -14,7 +14,8 @@ function App() {
 
   useEffect(() => {
     const path = location.pathname.split('/');
-    setPage(path[1]);
+    if (path[1]) setPage(path[1]);
+    else setPage('home');
   }, [location]);
 
   return (

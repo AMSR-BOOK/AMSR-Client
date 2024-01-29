@@ -23,7 +23,7 @@ export default function Header({ page }) {
   return (
     <header className={styles.container}>
       <IoChevronBackOutline
-        className={styles.back}
+        className={`${styles.back} ${page === 'home' && styles.noEffect}`}
         onClick={() => navigate(-1)}
       />
       <h1 className={styles.title}>{handleTranslate(page)}</h1>

@@ -18,6 +18,11 @@
     cursor: pointer;
   }
 
+  .noEffect {
+    color: white;
+    pointer-events: none;
+  }
+
   .setting {
     margin-right: 1rem;
     font-size: 1.25rem;

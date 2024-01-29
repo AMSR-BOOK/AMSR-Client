@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Search from './pages/Search';
 import NotFound from './pages/NotFound';
 import MyBooks from './pages/MyBooks';
-import Feed from './pages/Feed';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -16,16 +16,16 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
+        index: true,
+        element: <Home />,
+      },
+      {
         path: 'search',
         element: <Search />,
       },
       {
         path: 'mybooks',
         element: <MyBooks />,
-      },
-      {
-        path: 'feed',
-        element: <Feed />,
       },
     ],
   },
