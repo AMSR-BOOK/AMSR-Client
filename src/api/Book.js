@@ -4,7 +4,7 @@ export default class Book {
   }
 
   async search(keyword) {
-    return keyword ? this.#searchByKeyword(keyword) : this.#mostPopular();
+    return keyword ? this.#searchByKeyword(keyword) : new Error();
   }
 
   async myBooks() {
@@ -12,7 +12,7 @@ export default class Book {
   }
 
   async #searchByKeyword(keyword) {
-    return this.apiClient.search().then((res) => res.data);
+    return this.apiClient.search(keyword).then((res) => res.data);
   }
 
   async #mostPopular() {

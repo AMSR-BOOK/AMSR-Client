@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 export default class FakeBookClient {
-  async search() {
-    return axios.get('/data/searchResult.json');
+  async search(keyword) {
+    if (keyword === '쇼펜하우어') return axios.get('/data/searchResult.json');
+    else return new Error();
   }
 
   async mybooks() {

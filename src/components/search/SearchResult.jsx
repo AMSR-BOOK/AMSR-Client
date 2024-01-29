@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import BookCardLarge from '../card/BookCardLarge';
 import styles from './SearchResult.module.scss';
 import { useBookApi } from '../../context/BookApiContext';
+import SearchNoResult from './SearchNoResult';
 
 export default function SearchResult({ param }) {
   const [keyword, setKeyword] = useState(param.get('key'));
@@ -19,7 +20,7 @@ export default function SearchResult({ param }) {
   return (
     <>
       {isLoading && <p>Loading...</p>}
-      {error && <p>Error!!!</p>}
+      {error && <SearchNoResult />}
       {results && (
         <ul className={styles.list}>
           {results.map((book) => (
