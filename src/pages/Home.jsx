@@ -52,7 +52,7 @@ export default function Home() {
           ))}
         {results && results.length > 0 && (
           <div className={styles.btnGroup}>
-            <Link to="/" className={styles.btn}>
+            <Link to="/timer" className={styles.btn}>
               책 읽기 📖
             </Link>
             <Link to="/" className={styles.btn}>

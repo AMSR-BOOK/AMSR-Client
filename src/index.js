@@ -8,6 +8,7 @@ import Search from './pages/Search';
 import NotFound from './pages/NotFound';
 import MyBooks from './pages/MyBooks';
 import Home from './pages/Home';
+import Timer from './pages/Timer';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'mybooks',
         element: <MyBooks />,
+      },
+      {
+        path: 'timer',
+        element: <Timer />,
       },
     ],
   },
