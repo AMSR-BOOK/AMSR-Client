@@ -11,6 +11,13 @@ export default class Book {
     return this.apiClient.mybooks().then((res) => res.data);
   }
 
+  async getReadingBooks() {
+    return this.apiClient
+      .mybooks()
+      .then((res) => res.data)
+      .then((data) => data.filter((book) => book.status === 'READING'));
+  }
+
   async #searchByKeyword(keyword) {
     return this.apiClient.search(keyword).then((res) => res.data);
   }
