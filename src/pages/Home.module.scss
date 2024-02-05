@@ -27,7 +27,7 @@
         rgba($color: #ffffff, $alpha: 0.9) 70%,
         rgba($color: #ffffff, $alpha: 1) 75%
       ),
-      url('https://buly.kr/6XjWeqd');
+      url('../assets/img/book.jpg');
     background-size: cover;
   }
 
@@ -45,13 +45,13 @@
     writing-mode: vertical-rl;
   }
 
-  .title {
+  .txtLarge {
     background-color: transparent;
     font-size: 1.125rem;
     font-weight: 800;
   }
 
-  .subtitle {
+  .txtMedium {
     background-color: transparent;
     font-size: 0.75rem;
     padding-top: 0.125rem;
@@ -59,7 +59,62 @@
   }
 }
 
-.reading {
+.title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+
+  .arrow {
+    font-size: 1.25rem;
+    font-weight: 800;
+
+    &:focus {
+      color: black;
+    }
+  }
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 30rem;
+  padding: 1rem;
+  padding-top: 1.5rem;
+
+  .list {
+    display: flex;
+    overflow-x: scroll;
+  }
+}
+
+.reading {
+  display: flex;
+  flex-direction: column;
+  min-height: 10rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+
+  .btn {
+    margin: auto;
+    padding: 0.5rem 1rem;
+    min-width: 6.75rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .btnGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5.5rem;
+    margin-top: 1rem;
+  }
 }
