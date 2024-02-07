@@ -13,6 +13,8 @@ export default function Header({ page }) {
         return '피드';
       case 'mybooks':
         return '내 책장';
+      case 'timer' || 'reading':
+        return '독서기록';
       case 'setting':
         return '설정';
       default:
